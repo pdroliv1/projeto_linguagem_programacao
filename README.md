@@ -53,8 +53,8 @@ streamlit run app.py
 
 Depois da publicação, preencha os links abaixo.
 
-- Repositório: `https://github.com/SEU_USUARIO/projeto-g1`
-- Página do projeto: `https://SEU_USUARIO.github.io/projeto-g1/`
+- Repositório: `https://github.com/pdroliv1/projeto_linguagem_programacao`
+- Página do projeto: `https://pdroliv1.github.io/projeto_linguagem_programacao/`
 - Dashboard: `https://SEU_APP.streamlit.app/`
 
 ## Limitação
