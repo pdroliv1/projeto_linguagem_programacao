@@ -55,7 +55,7 @@ Depois da publicação, preencha os links abaixo.
 
 - Repositório: `https://github.com/pdroliv1/projeto_linguagem_programacao`
 - Página do projeto: `https://pdroliv1.github.io/projeto_linguagem_programacao/`
-- Dashboard: `https://SEU_APP.streamlit.app/`
+- Dashboard: `https://projetolinguagemprogramacao-afqffujnhobakhtgkc425j.streamlit.app/`
 
 ## Limitação
 
