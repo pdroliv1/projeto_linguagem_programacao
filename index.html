@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar de Segurança Viária | Projeto G1</title>
+  <style>
+    :root{--navy:#081c2c;--blue:#0b6e99;--cyan:#4ecdc4;--ink:#17212b;--paper:#f6f8fb}*{box-sizing:border-box}body{margin:0;font:16px/1.6 Arial,sans-serif;color:var(--ink);background:var(--paper)}.hero{background:linear-gradient(120deg,var(--navy),#124e78);color:#fff;padding:84px max(7vw,28px)}.hero p{max-width:700px;color:#d9edfa;font-size:1.2rem}.tag{color:var(--cyan);font-weight:700;text-transform:uppercase;letter-spacing:.1em}.btn{display:inline-block;background:var(--cyan);color:#062332;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:8px;margin:8px 10px 0 0}main{max-width:1080px;margin:0 auto;padding:48px 28px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px}.card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 5px 20px #102a4310;border:1px solid #e5eaf0}h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.08;margin:.2em 0}h2{margin-top:48px;color:var(--navy)}h3{margin-top:0;color:var(--blue)}.num{font-size:2rem;font-weight:800;color:var(--blue)}footer{padding:30px;text-align:center;background:var(--navy);color:#cdddea}@media(max-width:550px){.hero{padding:56px 28px}}
+  </style>
+</head>
+<body>
+  <section class="hero"><div class="tag">Avaliação G1 · Python</div><h1>Radar de Segurança Viária no Brasil</h1><p>Uma análise exploratória e interativa de acidentes de trânsito, construída com dados simulados para apoiar a leitura de padrões por tempo, região e gravidade.</p><a class="btn" href="https://SEU_APP.streamlit.app/" target="_blank">Abrir dashboard</a><a class="btn" href="https://github.com/SEU_USUARIO/projeto-g1" target="_blank">Ver código</a></section>
+  <main>
+    <h2>O desafio</h2><p>Acidentes de trânsito geram perdas humanas e pressionam os serviços públicos. Este projeto organiza a leitura de uma base simulada para identificar concentrações, sazonalidade e associações entre condições de ocorrência e gravidade.</p>
+    <div class="grid"><article class="card"><div class="num">4.440</div><h3>Registros analisados</h3><p>Observações entre 2015 e 2024, preparadas em Python.</p></article><article class="card"><div class="num">5</div><h3>Regiões</h3><p>Comparação territorial por região, UF e cidade.</p></article><article class="card"><div class="num">4</div><h3>Dimensões de ocorrência</h3><p>Tipos de acidente, período do dia, visibilidade e gravidade.</p></article></div>
+    <h2>Como a análise foi construída</h2><div class="grid"><article class="card"><h3>Preparação</h3><p>Conversão de datas, validação de valores ausentes e criação de atributos temporais e indicadores de vítimas.</p></article><article class="card"><h3>Indicadores</h3><p>Acidentes, feridos, mortes e taxa de mortalidade tornam a comparação mais objetiva.</p></article><article class="card"><h3>Exploração</h3><p>Gráficos temporais, comparativos e uma matriz de gravidade por visibilidade revelam o comportamento do conjunto.</p></article></div>
+    <h2>Resultados e limites</h2><p>O dashboard permite refinar qualquer resultado por ano, região, UF, gravidade e tipo de acidente. Como a fonte é uma simulação didática, seus achados devem ser interpretados como exercício analítico, não como diagnóstico oficial.</p>
+    <h2>Tecnologias</h2><p>Python · Pandas · Matplotlib · Seaborn · Streamlit · Plotly · SQLite · GitHub</p>
+  </main><footer>Projeto acadêmico — Análise e Visualização de Dados com Python</footer>
+</body></html>
