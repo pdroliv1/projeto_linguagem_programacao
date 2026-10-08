@@ -31,6 +31,11 @@ df = carregar_dados(str(DATA_PATH))
 persistir_sqlite(df)
 
 st.title("Radar de Segurança Viária no Brasil")
+st.markdown("""**Disciplina:** Linguagens de programação
+
+**Professor:** Alexandre Neves Louzada
+
+**Aluno:** Pedro Rigo de Oliveira""")
 st.caption("Análise exploratória de dados simulados de acidentes de trânsito — 2015 a 2024")
 st.info("Esta aplicação usa uma base simulada para fins educacionais. Os resultados indicam padrões do conjunto de dados, não estatísticas oficiais.")
 

@@ -1,5 +1,11 @@
 # Radar de Segurança Viária no Brasil
 
+**Disciplina:** Linguagens de programação
+
+**Professor:** Alexandre Neves Louzada
+
+**Aluno:** Pedro Rigo de Oliveira
+
 Projeto da Avaliação G1 de Análise e Visualização de Dados com Python. O projeto explora uma base **simulada** de acidentes de trânsito para identificar padrões por tempo, localidade e gravidade.
 
 ## Tecnologias
