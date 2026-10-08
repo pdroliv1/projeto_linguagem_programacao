@@ -8,6 +8,49 @@ import plotly.graph_objects as go
 from sqlalchemy import create_engine
 
 st.set_page_config(page_title="Radar de Segurança Viária", page_icon="RV", layout="wide")
+
+st.markdown("""
+<style>
+    [data-testid="stSidebar"] {
+        background: linear-gradient(180deg, #123047 0%, #0b1f30 100%);
+        border-right: 1px solid #285269;
+    }
+    [data-testid="stSidebar"] > div:first-child {
+        padding: 1.5rem 1rem;
+    }
+    [data-testid="stSidebar"] h3 {
+        color: #f7c873;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.2rem;
+    }
+    [data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+        color: #b7cedb;
+        font-size: 0.82rem;
+        margin-bottom: 1.25rem;
+    }
+    [data-testid="stSidebar"] [data-testid="stMultiSelect"] {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(183, 206, 219, 0.25);
+        border-left: 4px solid #f7c873;
+        border-radius: 10px;
+        margin-bottom: 0.9rem;
+        padding: 0.4rem 0.5rem 0.15rem;
+    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] {
+        background-color: #1f6f78 !important;
+        border-radius: 5px !important;
+    }
+    [data-testid="stSidebar"] [data-baseweb="tag"] span {
+        color: #ffffff !important;
+        font-weight: 600;
+    }
+    [data-testid="stSidebar"] [data-baseweb="select"] > div {
+        background-color: transparent !important;
+        border: 0 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 ROOT = Path(__file__).parent
 DATA_PATH = ROOT / "dados" / "acidentes_transito_brasil.csv"
 DB_PATH = ROOT / "database" / "acidentes.db"
@@ -40,7 +83,8 @@ st.caption("Análise exploratória de dados simulados de acidentes de trânsito 
 st.info("Esta aplicação usa uma base simulada para fins educacionais. Os resultados indicam padrões do conjunto de dados, não estatísticas oficiais.")
 
 with st.sidebar:
-    st.header("Filtros")
+    st.markdown("### Painel de filtros")
+    st.caption("Ajuste o recorte da análise em cada dimensão.")
     anos = st.multiselect("Ano", sorted(df["ano"].unique()), default=sorted(df["ano"].unique()))
     regioes = st.multiselect("Região", sorted(df["regiao"].unique()), default=sorted(df["regiao"].unique()))
     ufs_disponiveis = sorted(df.loc[df["regiao"].isin(regioes), "uf"].unique())
