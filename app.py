@@ -1,11 +1,11 @@
 """Dashboard de acidentes de trânsito no Brasil (base simulada)."""
 from pathlib import Path
-import sqlite3
 import pandas as pd
 import numpy as np
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
+from sqlalchemy import create_engine
 
 st.set_page_config(page_title="Radar de Segurança Viária", page_icon="RV", layout="wide")
 ROOT = Path(__file__).parent
@@ -22,10 +22,10 @@ def carregar_dados(caminho: str) -> pd.DataFrame:
     return df
 
 def persistir_sqlite(df: pd.DataFrame) -> None:
-    """Mantém uma cópia consultável da base tratada em SQLite."""
+    """Mantém uma cópia consultável da base tratada em SQLite via SQLAlchemy."""
     DB_PATH.parent.mkdir(exist_ok=True)
-    with sqlite3.connect(DB_PATH) as conn:
-        df.to_sql("acidentes", conn, if_exists="replace", index=False)
+    engine = create_engine(f"sqlite:///{DB_PATH.as_posix()}")
+    df.to_sql("acidentes", engine, if_exists="replace", index=False)
 
 df = carregar_dados(str(DATA_PATH))
 persistir_sqlite(df)
@@ -94,7 +94,7 @@ with tab3:
 
 with tab4:
     st.subheader("Base, tratamento e integração")
-    st.write("A fonte é o CSV fornecido para a avaliação. A aplicação converte datas, cria período mensal, índice de vítimas e taxa de mortalidade. Uma cópia tratada é persistida em SQLite em database/acidentes.db a cada execução.")
+    st.write("A fonte é o CSV fornecido para a avaliação. A aplicação converte datas, cria período mensal, índice de vítimas e taxa de mortalidade. Uma cópia tratada é persistida com SQLAlchemy e SQLite em database/acidentes.db a cada execução.")
     st.subheader("Recorte filtrado")
     st.dataframe(filtrado.sort_values("data", ascending=False), use_container_width=True, hide_index=True)
     st.download_button("Baixar dados filtrados (CSV)", filtrado.to_csv(index=False).encode("utf-8"), "acidentes_filtrados.csv", "text/csv")

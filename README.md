@@ -12,7 +12,7 @@ Projeto da Avaliação G1 de Análise e Visualização de Dados com Python. O pr
 
 - Python, Pandas, NumPy, Matplotlib e Seaborn
 - Streamlit e Plotly
-- SQLite para persistência da base tratada
+- SQLAlchemy e SQLite para persistência da base tratada
 - Git/GitHub e GitHub Pages
 
 ## Estrutura
@@ -47,6 +47,12 @@ streamlit run app.py
 - Gráficos interativos, tabela detalhada e exportação do recorte filtrado.
 - Persistência da base preparada em SQLite.
 - Notebook com todo o percurso da análise.
+
+## Notebook no Google Colab
+
+O arquivo [analise_acidentes.ipynb](notebooks/analise_acidentes.ipynb) é compatível com o Google Colab e contém as dez etapas exigidas na avaliação. Para abri-lo, use o botão abaixo ou faça upload do arquivo `.ipynb` em [Google Colab](https://colab.research.google.com/).
+
+[![Abrir no Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pdroliv1/projeto_linguagem_programacao/blob/main/notebooks/analise_acidentes.ipynb)
 
 ## Perguntas investigadas
 
