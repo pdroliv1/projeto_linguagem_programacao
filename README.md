@@ -55,14 +55,7 @@ streamlit run app.py
 3. Que tipos de acidente e condições de visibilidade merecem atenção?
 4. Onde a mortalidade proporcional é mais elevada?
 
-## Publicação
+## Links importantes:
 
-Depois da publicação, preencha os links abaixo.
-
-- Repositório: `https://github.com/pdroliv1/projeto_linguagem_programacao`
 - Página do projeto: `https://pdroliv1.github.io/projeto_linguagem_programacao/`
 - Dashboard: `https://projetolinguagemprogramacao-afqffujnhobakhtgkc425j.streamlit.app/`
-
-## Limitação
-
-Os dados foram fornecidos como uma simulação educacional. Os resultados não representam estatísticas oficiais de segurança viária.
